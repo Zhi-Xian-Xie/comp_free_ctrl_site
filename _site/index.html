@@ -190,27 +190,19 @@
         <br>
         <figure>
             <h2 class="title is-2">Real-World Object Reorientation</h2>
-            Google Drive link: <a href="https://drive.google.com/drive/folders/1LJiEzE9jI-rJNj66vmwQuj1QEKn30sIQ" target="_blank">Click here</a>
+            <h2 class="title is-4">Cube</h2>
+            <video id="teaser" muted loop playsinline controls style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/hardware/cube_1x_small.mp4"
+                      type="video/mp4">
+            </video>
             <br><br>
-            <div class="columns is-mobile is-vcentered">
-              <div class="column is-half" style="background-color: black; padding: 10px;">
-                <p style="text-align: center; color: white; font-size: 24px;"><b>Cube</b></p>
-                <video class="video"  
-                  autoplay controls muted loop playsinline 
-                  style="width: 450px; height: 300px; display: block; margin: 0 auto;" 
-                  src="./static/videos/hardware/cube_1x_small.mp4"> 
-                </video>
-              </div>
-              <div class="column is-half" style="background-color: black; padding: 10px;">
-                <p style="text-align: center; color: white; font-size: 24px;"><b>Duck</b></p>
-                <video class="video"  
-                  autoplay controls muted loop playsinline 
-                  style="width: 450px; height: 300px; display: block; margin: 0 auto;" 
-                  src="./static/videos/hardware/duck_1x_small.mp4"> 
-                </video>
-              </div>
-            
-            </div>
+            <h2 class="title is-4">Duck</h2>
+            <video id="teaser" muted loop playsinline controls style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/hardware/duck_1x_small.mp4"
+                      type="video/mp4">
+            </video>
+            <br><br>
+            Google Drive link: <a href="https://drive.google.com/drive/folders/1LJiEzE9jI-rJNj66vmwQuj1QEKn30sIQ" target="_blank">Click here</a>
         </figure>
       </h2>
   </div>
@@ -326,7 +318,20 @@
           <figcaption class="has-text-centered"></figcaption>
         </figure> -->
         <p> 
-          Coming soon...     
+          We develop a real-time control system that enables a robot to flip and slide objects on its palm—without 
+          needing predefined motions or contact plans.
+        </p>
+        <p>
+          At the core of our approach is a complementarity-free contact model, which calculates the contact force by examining the compression of the contact dual cone. This model is integrated into a model 
+          predictive control (MPC) framework that plans the robot’s movements.
+        </p>
+        <figure>
+          <img src="./static/images/dual_cone.png" alt="Object Penetration in Dual Cone" style="max-width: 70%; height: auto;">
+          <figcaption class="has-text-centered"></figcaption>
+        </figure>
+        <p>
+          Together, this system allows the robot to perform complex object reorientation tasks—like 
+          flipping a cube or sliding a duck into place—with speed, precision, and adaptability in both simulation and real-world settings.   
         </p>
       </div>
     <!-- </div> -->
@@ -346,12 +351,7 @@
     <!-- Results header. -->
     <h1 class="title is-2">More Simulation Results</h1>
     <br>
-    <h3 class="title is-4" style="text-align: center;">Dynamic Reorientation via Controlled Sliding</h3>
-    <p>  Coming soon... 
-    </p>
-    <br>
-
-
+    <h3 class="title is-4" style="text-align: center;">180-Degree Dynamic Reorientation via Controlled Sliding</h3>
     <!--/ Results header. -->
     <!-- <div class="tabs is-toggle is-fullwidth is-centered">
       <ul>
@@ -362,36 +362,37 @@
     </div> -->
 
     <!-- Results videos. -->
-    <div class="columns is-vcentered has-text-centered is-full-width">
-      <!-- <div class="column">
-        <div class="publication-video">
+    <div class="columns is-vcentered has-text-centered is-full-height">
+      <div class="column">
+        <div class="publication-video-sliding">
           <video class="interpolation-video tabs-balls" controls autoplay muted loop>
-            <source src="./static/videos/ball_cube/1.mp4"
-                    type="video/mp4">
+            <source src="./static/videos/rotation/cube.webm"
+                    type="video/webm">
+            
           </video>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <div class="column">
-        <div class="publication-video">
+      <div class="column">
+        <div class="publication-video-sliding">
           <video class="interpolation-video tabs-balls" controls autoplay muted loop>
-            <source src="./static/videos/ball_cube/2.mp4"
-                    type="video/mp4">
+            <source src="./static/videos/rotation/duck.webm"
+                    type="video/webm">
           </video>
           
         </div>
-      </div>
+      </div> 
 
       <div class="column">
-        <div class="publication-video">
+        <div class="publication-video-sliding">
           <video class="interpolation-video tabs-balls" controls autoplay muted loop>
-            <source src="./static/videos/ball_cube/3.mp4"
-                    type="video/mp4">
+            <source src="./static/videos/rotation/teapot.webm"
+                    type="video/webm">
           </video>
         </div>
       </div>
 
-      <div class="column">
+      <!-- <div class="column">
         <div class="publication-video">
           <video class="interpolation-video tabs-balls" controls autoplay muted loop>
             <source src="./static/videos/ball_cube/4.mp4"
@@ -403,8 +404,6 @@
     </div>
   </div>
 </section>
-
-
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -414,54 +413,35 @@
     </p>
     <br>
 
-    <!--/ Results header. -->
-
-  <!-- <div class="tabs is-toggle is-fullwidth is-centered">
-    <ul>
-      <li class="is-active"><a class="tab-font">Cube</a></li>
-      <li><a class="tab-font">Foambrick</a></li>
-      <li><a class="tab-font">Stick</a></li>
-    </ul>
-  </div> -->
-
-  <!-- Results videos. -->
-  <!-- <div class="columns is-vcentered has-text-centered is-full-width">
-    <div class="column">
-      <div class="publication-video">
-        <video class="interpolation-video tabs-hands" controls autoplay muted loop>
-          <source src="./static/videos/hand_cube/1.mp4"
-                  type="video/mp4">
-        </video>
-        
+    <div class="columns is-vcentered has-text-centered is-full-width">
+      <div class="column">
+        <div class="publication-video-sliding">
+          <video class="interpolation-video tabs-balls" controls autoplay muted loop>
+            <source src="./static/videos/flip/flip_1.webm"
+                    type="video/webm">
+            
+          </video>
+        </div>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="publication-video">
-        <video class="interpolation-video tabs-hands" controls autoplay muted loop>
-          <source src="./static/videos/hand_cube/2.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
+      <div class="column">
+        <div class="publication-video-sliding">
+          <video class="interpolation-video tabs-balls" controls autoplay muted loop>
+            <source src="./static/videos/flip/flip_2.webm"
+                    type="video/webm">
+          </video>
+          
+        </div>
+      </div> 
 
-    <div class="column">
-      <div class="publication-video">
-        <video class="interpolation-video tabs-hands" controls autoplay muted loop>
-          <source src="./static/videos/hand_cube/3.mp4"
-                  type="video/mp4">
-        </video>
+      <div class="column">
+        <div class="publication-video-sliding">
+          <video class="interpolation-video tabs-balls" controls autoplay muted loop>
+            <source src="./static/videos/flip/flip_3.webm"
+                    type="video/webm">
+          </video>
+        </div>
       </div>
-    </div> -->
-
-    <!-- <div class="column">
-      <div class="publication-video">
-        <video class="interpolation-video tabs-hands" controls autoplay muted loop>
-          <source src="./static/videos/hand_cube/4.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div> -->
 
 
   </div>

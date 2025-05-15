@@ -107,6 +107,23 @@ body {
     height: 100%;
 }
 
+.publication-video-sliding {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 4px; /* optional */
+}
+
+.publication-video-sliding video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or 'cover' if preferred */
+}
+
 .publication-body img {
 }
 
